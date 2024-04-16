@@ -1,0 +1,185 @@
+
+#nave {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    width: 5.3125vw;
+    top: 50%;
+    z-index: 6;
+    transition: top 1s ease;
+    animation: pulse 4s infinite; /* ajuste a duração da animação conforme necessário */
+    animation: shake 10s ease-in-out infinite; /* Chacoalha a cada 3 segundos */
+    animation: fly 5s ease-in-out infinite; /* Chacoalha a cada 3 segundos */
+
+ }
+
+.space-box {
+    width: 5.46875vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-left: 0.052083333333333336vw solid #FFDD00;
+    border-right: 0.052083333333333336vw solid #FFDD00;
+    height: 100vh;
+}
+
+.explosion {
+    position: absolute;
+    top: 50%; /* alinhado verticalmente com #nave */
+    right: 0; /* alinhado horizontalmente com #nave */
+    width: 5vw; /* ajuste conforme necessário */
+    height: 5vw; /* ajuste conforme necessário */
+    background-color: #3024b4; /* cor da explosão */
+    border-radius: 50%; /* forma circular */
+    animation: explosion 4s infinite; /* ajuste a duração da animação conforme necessário */
+    z-index: 5;
+    transition: top 1s ease;
+}
+
+.starwars {
+    position: absolute;
+    z-index: 5;
+    transition: all 0.5s ease;
+    animation: pulse 4s infinite; /* ajuste a duração da animação conforme necessário */
+    width: 8.59375vw;
+}
+
+.marketins {
+    position: fixed;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 5.46875vw;
+    animation: moveBanner 4000s linear infinite; /* Ajuste a duração da animação conforme necessário */
+
+    p {
+        font-weight: 300;
+        color: #FFDD00;
+        font-size: 1.5625vw;
+        text-transform: uppercase;
+        display: flex;
+        transform: rotate(180deg);
+        writing-mode: vertical-rl;
+        margin: 2vw 0;
+        letter-spacing: 0.3vw;
+    }
+    svg {
+        height: 17.5vw;
+    }
+}
+
+.marketing-box {
+    width: 5.46875vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-left: 0.052083333333333336vw solid #FFDD00;
+    border-right: 0.052083333333333336vw solid #FFDD00;
+    height: 100vh;  
+}
+
+@keyframes fly {
+    25% { transform: translate(3px, 3px) rotate(3deg); }
+    75% { transform: translate(-3px, 3px) rotate(-3deg); }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-3px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes explosion {
+    0% {
+        opacity: 1;
+        transform: scale(0);
+        filter: blur(0px); /* sem desfoque inicialmente */
+    }
+    50% {
+        filter: blur(10px); /* aumenta o desfoque pela metade da duração da animação */
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2);
+        filter: blur(20px); /* máximo desfoque no final da animação */
+    }
+}
+
+ @keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes moveBanner {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-100%);
+    }
+}
+
+  
+@media screen and (max-width: 750px) {
+
+    .marketing-box {
+        width: 10vw;
+    }
+
+    .marketins {
+        width: 10vw;
+        p {
+            font-size: 4vw;
+            margin: 4vw 0;
+            letter-spacing: 0.5vw;
+        }
+        svg {
+            height: 34vw;
+            width: 8vw;
+        }
+    }
+
+    .space-box {
+        width: 10vw;
+    }
+
+    .explosion {
+        top: 42.5%; /* alinhado verticalmente com #nave */
+        right: 0; /* alinhado horizontalmente com #nave */
+        width: 9vw; /* ajuste conforme necessário */
+        height: 9vw; /* ajuste conforme necessário */
+    }
+
+    #nave {
+        width: 10vw;
+        top: 50%;
+    }
+
+    .starwars {
+        top: 2%;
+        left: 39%;
+       width: 27vw
+    }
+    
+}
+  

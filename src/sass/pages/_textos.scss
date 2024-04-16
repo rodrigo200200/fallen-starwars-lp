@@ -1,0 +1,130 @@
+.box-titulo {
+    overflow: visible;
+    width: 100%;
+    .titulo1 {
+        color: #FFDD00;
+        font-weight: bold;
+        font-size: 2.4479166666666665vw;
+        letter-spacing: 0.4vw;
+        text-transform: uppercase;
+        margin-top: 1vw;
+    }
+    .titulo2 {
+        color: #FFFFFF;
+        font-weight: bold;
+        font-size: 3.125vw;
+        letter-spacing: 0.54vw;
+        text-transform: uppercase;
+        margin-left: -4px;
+    }
+    .titulo3 {
+        color: #FFFFFF;
+        font-weight: bold;
+        font-size: 2.2916666666666665vw;
+        letter-spacing: 0.54vw;
+        text-transform: uppercase;
+        margin-left: -4px;
+    }
+    .subt1 {
+        color: #FFFFFF;
+        font-weight: bold;
+        font-size: 1.4583333333333333vw;
+        letter-spacing: 0.4vw;
+        text-transform: uppercase;
+    }
+    .subt2 {
+        color: #FFFFFF;
+        font-weight: 100;
+        font-size: 1.0416666666666667vw;
+        letter-spacing: 0.4vw;
+        text-transform: uppercase;
+    }
+    .subt3 {
+        color: #FFFFFF;
+        font-weight: 100;
+        font-size: 1.25vw;
+        letter-spacing: 0.4vw;
+        text-transform: uppercase;
+        margin-top: 1.5vw;
+        line-height: 1.4vw;
+    }
+}
+.box-texto {
+    .t1 {
+        margin-top: 2vw;
+        color: #FFFFFF;
+        font-weight: 300;
+        font-size:0.9375vw;
+        letter-spacing: 0.2vw;
+        text-transform: uppercase;
+        line-height: 1.1458333333333333vw;
+    }
+    .t2 {
+        margin-top: 1.2vw;
+        color: #FFFFFF;
+        font-weight: 300;
+        font-size:0.7291666666666666vw;
+        letter-spacing: 0.1vw;
+        line-height: 1.1458333333333333vw;
+        text-align: justify;
+        a {
+            color: #FFFFFF;
+            text-decoration: underline;
+            transition: all 1s ease;
+        }
+        a:hover {
+            color: #FFDD00;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+  
+    .box-titulo {
+        overflow: visible;
+        width: 100%;
+        .titulo1 {
+            font-size: 5.8vw;
+            letter-spacing: 0.4vw;
+            margin-top: 2vw;
+        }
+        .titulo2 {
+            font-size: 8.7vw;
+            letter-spacing: 0.8vw;
+        }
+        .titulo3 {
+            font-size: 2.2916666666666665vw;
+            letter-spacing: 0.54vw;
+            margin-left: -4px;
+        }
+        .subt1 {
+            font-size: 4.5vw;
+            letter-spacing: 0.9vw;
+        }
+        .subt2 {
+            font-size: 3vw;
+            letter-spacing: 0.6vw;
+        }
+        .subt3 {
+            font-size: 1.25vw;
+            letter-spacing: 0.4vw;
+            margin-top: 1.5vw;
+            line-height: 1.4vw;
+        }
+    }
+    .box-texto {
+        .t1 {
+            margin-top: 5vw;
+            font-size:2.4vw;
+            letter-spacing: 0.2vw;
+            line-height: 3vw;
+        }
+        .t2 {
+            margin-top: 2vw;
+            font-size:2.4vw;
+            letter-spacing: 0.2vw;
+            line-height: 3vw;
+        }
+    }
+  
+}

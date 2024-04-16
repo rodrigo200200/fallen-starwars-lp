@@ -1,0 +1,58 @@
+.menu{
+    position: fixed;
+    right: 6vw;
+    top: 10vw;
+    width: 2vw;
+    height: 16vw;
+    transform: translatey(-50%);
+    cursor: pointer;
+
+    ul{
+        position: absolute;
+        list-style: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        li{
+            color: #FFDD00;
+            font-size: 0.7291666666666666vw;
+            font-weight: 300;
+            letter-spacing: 0.22vw;
+            margin-bottom: 1vw;
+        }
+        li.active{
+            font-weight: 700;
+        }
+        li+li {
+            margin-top: 10px;
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        right: 10vw;
+        top: 30vw;
+        width: 10vw;
+        height: 80vw;
+    
+        ul{
+            position: absolute;
+            list-style: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            li{
+                font-size: 3vw;
+                letter-spacing: 0.22vw;
+                margin-bottom: 1vw;
+            }
+            li.active{
+                font-weight: 700;
+            }
+            li+li {
+                margin-top: 10px;
+            }
+        }
+    
+    }
+ }
+

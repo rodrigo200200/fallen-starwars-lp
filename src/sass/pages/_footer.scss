@@ -1,0 +1,91 @@
+footer {
+    background: #000;
+    width: 100%;
+    .logo {
+        padding: 4.665799062988027vw 0 6.4986985944820406vw 0;
+        width: 57.080167vw;
+        display: block;
+        margin: 0 auto;
+    }
+    .box-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        svg:first-of-type {
+            width: 12.083333333333334vw;
+
+        }
+        svg:last-of-type {
+            width: 17.447916666666668vw;
+        }
+
+    }
+    .box-direitos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 4.4685059864653826vw;
+        p, a {
+            color: #807E7E;
+            font-size: 2.933333333333333vw;
+            line-height: 3.933333333333333vw;
+            text-align: center;
+            font-weight: 500;
+        }
+        a {
+            color: #fff !important;
+            text-decoration: none;
+            border-bottom: 1px solid #ffd400;
+            transition: border 150ms ease, color 150ms ease;
+        }
+        a:hover {
+            border-color: #fff;
+            color: #ffd400 !important;
+        }
+    }
+    .copy {
+        color: #FFF;
+        font-size: 2.933333333333333vw;
+        line-height: 2.933333333333333vw;
+        text-align: center;
+        font-weight: 500;
+        padding: 3.237012vw 0 3.041124414367517vw 0;
+        margin-left: -6vw;
+    }
+    @media screen and (min-width: 750px) {
+        .logo {
+            padding: 1.665799062988027vw 0 2.4986985944820406vw 0;
+            width: 26.080166579906297vw;
+            display: block;
+            margin: 0 auto;
+        }
+        .box-direitos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 0.4685059864653826vw;
+            p, a {
+                color: #807E7E;
+                font-size: .6726184279021344vw;
+                line-height: 1vw;
+                text-align: center;
+                font-weight: 500;
+            }
+            a{
+                text-decoration: underline;
+            }
+        }
+        .copy {
+            color: #FFF;
+            font-size: .6726184279021344vw;
+            line-height: 1.23378448724622591vw;
+            text-align: center;
+            font-weight: 500;
+            padding: 0 0 0.7vw 0;
+        }
+    }
+  
+  }
+  

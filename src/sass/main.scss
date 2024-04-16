@@ -1,0 +1,29 @@
+@import 'base/all';
+@import 'pages/all';
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+   }
+main {
+    position: relative;
+ }
+
+html {
+    scroll-behavior: smooth;
+}
+
+p, a, body {
+    overflow: hidden;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    overflow-x: hidden;
+
+}
+
