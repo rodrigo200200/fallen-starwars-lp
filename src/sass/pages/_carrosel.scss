@@ -5,7 +5,6 @@
     .card {
         width: 6.875vw;
         height: 6.875vw;
-        background: #FFF;
         margin-left: 1vw;
         clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 78%, 0% 162%, 0% 75%);
         transition: all 1s ease;
@@ -13,7 +12,6 @@
         img {
             width: 6.875vw;
             height: 6.875vw;
-            background: #FFF;
             clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 78%, 0% 162%, 0% 75%);
             transition: all 1s ease;
             cursor: pointer;
@@ -71,32 +69,101 @@
         position: relative;
         overflow: visible;
         img {
-            width: 30vw;
+            width: 25vw;
             clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 78%, 0% 162%, 0% 75%);
         }
         .close {
             position: absolute;
-            top: -4vw;
-            right: -3vw;
+            top: 0.8vw;
+            right: 0.5vw;
             color: white;
             font-size: 5vw;
             cursor: pointer;
             z-index: 1;
-          }
-          .close:hover {
-            color: #FFDD00;
+            width: 1.09375vw;
+            height: 4.010416666666667vw;
           }
     }
 
   }
   
 
-  
+  .box-inverse {
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 
 
 
-@media screen and (min-width: 750px) {
-  
-  
+@media screen and (max-width: 750px) {
+    .box-inverse {
+        flex-direction: column-reverse;
+    }
+    
+    .carousel {
+        width: 100%;
+        left: -3vw;
+        .card {
+            width: 6.875vw;
+            height: 19.72222222222222vw;
+            margin-left: 3vw;
+            clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 80%, 0% 167%, 0% 75%);
+            img {
+                width: 100%;
+                height: auto;
+                clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 80%, 0% 167%, 0% 75%);
+            }
+        }  
+        .slick-slide {
+            visibility: hidden;
+        }
+        .slick-active {
+            visibility: visible;
+        }
+        .slick-track {
+            padding: 1vw 0;
+        }
+        .slick-prev:before, .slick-next:before {
+            display: none;
+        }
+        .slick-prev {
+            left: -5%;
+        }
+        .slick-next {
+            right: -7.5%; 
+        }
+        .slick-arrow {
+            overflow: visible;
+            width: auto;
+            height: auto;
+            i {
+                font-size: 6vw;
+                color: #fff;
+                transition: all 1s ease;
+            }
+            i:hover {
+                color: #FFDD00;
+            }
+        }
+    }
+    
+      .modal-content {
+        .box {
+            img {
+                width: 100vw;
+                clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 78%, 0% 162%, 0% 75%);
+                clip-path: unset;
+            }
+            .close {
+                top: 4.8vw;
+                right: 3.5vw;
+                height: 21.11111111111111vw;
+                width: 5.555555555555555vw;
+              }
+        }
+    
+      }
   
 }

@@ -6,9 +6,8 @@
 * {
     margin: 0;
     padding: 0;
-    overflow: hidden;
-
    }
+
 main {
     position: relative;
  }
@@ -16,14 +15,19 @@ main {
 html {
     scroll-behavior: smooth;
 }
-
+body {
+    background: #000;
+}
 p, a, body {
-    overflow: hidden;
-
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     overflow-x: hidden;
 
 }
+@media screen and (min-width: 750px) {
 
+    * {
+        overflow: hidden;
+       }
+}

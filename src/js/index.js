@@ -18,8 +18,50 @@ import "../img/bg7-mob.webp";
 import "../img/bg8-mob.webp";
 import "../img/bg9-mob.webp";
 import "../img/nave.webp";
-import "../img/prod-thumb-1.webp";
-
+import "../img/thum_0365.webp";
+import "../img/thum_0372.webp";
+import "../img/thum_0420.webp";
+import "../img/thum_0487.webp";
+import "../img/thum_0507.webp";
+import "../img/thum_0526.webp";
+import "../img/thum_0542.webp";
+import "../img/thum_0602.webp";
+import "../img/thum_0638.webp";
+import "../img/thum_0662.webp";
+import "../img/thum_0673.webp";
+import "../img/thum_0687.webp";
+import "../img/thum_0697.webp";
+import "../img/thum_0721.webp";
+import "../img/thum_0802.webp";
+import "../img/thum_0821.webp";
+import "../img/thum_0857.webp";
+import "../img/thum_0884.webp";
+import "../img/thum_0972.webp";
+import "../img/thum_1200.webp";
+import "../img/thum_0982.webp";
+import "../img/thum_0918.webp";
+import "../img/1200.webp";
+import "../img/0982.webp";
+import "../img/0972.webp";
+import "../img/0918.webp";
+import "../img/0884.webp";
+import "../img/0365.webp";
+import "../img/0372.webp";
+import "../img/0420.webp";
+import "../img/0487.webp";
+import "../img/0507.webp";
+import "../img/0542.webp";
+import "../img/0602.webp";
+import "../img/0638.webp";
+import "../img/0662.webp";
+import "../img/0673.webp";
+import "../img/0687.webp";
+import "../img/0802.webp";
+import "../img/0821.webp";
+import "../img/0857.webp";
+import "../img/0697.webp";
+import "../img/0721.webp";
+import "../img/0526.webp";
 
 
 const sections = document.querySelectorAll('section');
@@ -30,12 +72,9 @@ let liSections = [];
 let li = [];
 
 let currentSection = 0;
-let touchStartY = 0;
-let touchEndY = 0;
+
 
 function main() {
-
-
 
     const totalAds = 9; // Número total de anúncios
     const marketinsContainer = document.querySelector('.marketins');
@@ -53,8 +92,6 @@ function main() {
 
     
     window.addEventListener('wheel', scroll);
-    window.addEventListener('touchstart', handleTouchStart);
-    window.addEventListener('touchend', handleTouchEnd);
     navi();
 
     for (let i = 0; i < liSections.length; i++) {
@@ -68,27 +105,6 @@ function main() {
     }
 }
 
-function handleTouchStart(evt) {
-    touchStartY = evt.touches[0].clientY;
-};
-
-function handleTouchEnd(evt) {
-    touchEndY = evt.changedTouches[0].clientY;
-    const touchTarget = evt.target;
-
-    // Verificar se o toque ocorreu dentro da área do Slick Carousel
-    if (touchTarget.closest('.slick-slider')) {
-        // Se sim, não execute a ação de passar sessões
-        return;
-    }
-
-    // Executar ação de passar sessões apenas se o toque não estiver na área do Slick Carousel
-    if (touchStartY > touchEndY) {
-        navigateSections('down');
-    } else {
-        navigateSections('up');
-    }
-}
 
 function scroll(event) {
     if (event.deltaY > 0) {
@@ -115,10 +131,14 @@ function navigateSections(direction) {
     }
 
     // Definindo opacidade 0 para o .box-sec da seção anterior
+
+    if (window.innerWidth > 780) {
     const previousBoxSec = previousSection.querySelector('.box-sec');
     if (previousBoxSec) {
         previousBoxSec.style.opacity = 0;
     }
+    }
+
 }
 
 function navi() {
@@ -150,70 +170,43 @@ document.addEventListener('DOMContentLoaded', main);
 
 
 // Função para atualizar a posição dos elementos com base na classe da seção visível
-function updateElementsPosition(sectionClass) {
+function updateElementsPosition(entry) {
     const navElement = document.getElementById('nave');
     const explosionElement = document.querySelector('.explosion');
     const starwars = document.querySelector('.starwars');
+    const sectionClass = entry.target.classList[0]; // Obtém a classe da seção visível
 
-        // Definindo a opacidade de todas as seções para 0
-        const allSections = document.querySelectorAll('.box-sec');
-        allSections.forEach(section => {
-            section.style.opacity = 0;
-        });
-    const currentSection = document.querySelector(`.${sectionClass} .box-sec`);
-    currentSection.style.opacity = 1;
-    if (window.innerWidth < 780) {
-        const positionStaTop = {
-            'sck1': 2,
-            'sck2': 124,
-            'sck3': 225,
-            'sck4': 319,
-            'sck5': 427,
-            'sck6': 525,
-            'sck7': 624,
-            'sck8': 724,
-            'sck9': 819
-        };
-        const positionStaLeft = {
-            'sck1': 39,
-            'sck2': 52,
-            'sck3': 52,
-            'sck4': 52,
-            'sck5': 52,
-            'sck6': 56,
-            'sck7': 54,
-            'sck8': 52,
-            'sck9': 12
-        };
-        starwars.style.top = `${positionStaTop[sectionClass]}%`;
-        starwars.style.left = `${positionStaLeft[sectionClass]}%`;
-      } else {
-        const positionStaTop = {
-            'sck1': 3,
-            'sck2': 145,
-            'sck3': 245,
-            'sck4': 322,
-            'sck5': 445,
-            'sck6': 539,
-            'sck7': 633,
-            'sck8': 715.1,
-            'sck9': 819
-        };
-        const positionStaLeft = {
-            'sck1': 46,
-            'sck2': 34,
-            'sck3': 53,
-            'sck4': 12,
-            'sck5': 12,
-            'sck6': 12,
-            'sck7': 12,
-            'sck8': 55.8,
-            'sck9': 12
-        };
-        starwars.style.top = `${positionStaTop[sectionClass]}%`;
-        starwars.style.left = `${positionStaLeft[sectionClass]}%`;
-      }
-      const position = {
+    // Definindo a opacidade de todas as seções para 0
+    const allSections = document.querySelectorAll('.box-sec');
+    allSections.forEach(section => {
+        section.style.opacity = 0;
+    });
+    // Definindo opacidade 1 para o .box-sec da seção visível
+    const currentSection = entry.target.querySelector('.box-sec');
+    if (window.innerWidth < 780 && sectionClass === 'sck9') {
+        starwars.style.opacity = 0;
+    } else {
+        starwars.style.opacity = 1;
+    }
+
+    if (currentSection) {
+        currentSection.style.opacity = 1;
+    } else {
+        if (window.innerWidth < 780) {
+            currentSection.style.opacity = 0;
+        }
+    }
+    // Atualiza o menu
+    const menuItems = document.querySelectorAll('.menu li');
+    menuItems.forEach((menuItem, index) => {
+        if (`sck${index + 1}` === sectionClass) {
+            menuItem.classList.add('active');
+        } else {
+            menuItem.classList.remove('active');
+        }
+    });
+
+    const position = {
         'sck1': 50,
         'sck2': 150,
         'sck3': 250,
@@ -232,11 +225,10 @@ function updateElementsPosition(sectionClass) {
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            const sectionClass = entry.target.classList[0]; // Obtém a classe da seção visível
-            updateElementsPosition(sectionClass); // Atualiza a posição dos elementos
+            updateElementsPosition(entry); // Atualiza a posição dos elementos
         }
     });
-}, { threshold: 1 }); // Defina o limiar como 1 para detectar quando a seção está completamente visível
+}, { threshold: 0.7 }); // Defina o limiar como 1 para detectar quando a seção está completamente visível
 
 // Observar cada seção
 sections.forEach(section => {
@@ -245,25 +237,61 @@ sections.forEach(section => {
 
 
 
+// Função para adicionar evento de clique aos cartões
+function addClickEventToCards() {
+    // Get all cards
+    var cards = document.querySelectorAll(".card");
+  
+    // Loop through each card
+    cards.forEach(function(card) {
+      // Add click event listener to open corresponding modal
+      card.addEventListener('click', function() {
+        var modalContentPath = this.getAttribute('data-modal-content');
+        // var productUrl = this.getAttribute('data-modal-url');
+  
+        // modalContentUrl.href = productUrl;
+        modalContent.src = modalContentPath;
+        modal.style.display = "block";
+      });
+    });
+  }
+  
+  // Adicionar evento de clique aos cartões após a inicialização do Slick
+  $('.carousel').on('afterChange', function(event, slick, currentSlide) {
+    addClickEventToCards();
+  });
+
+
+// Adicionar evento de clique aos cartões no carregamento inicial da página
 $(document).ready(function(){
     $('.carousel').slick({
-      slidesToShow: 6,
+      slidesToShow: 6, // Alterado para 6 para desktops
       slidesToScroll: 1,
       arrows: true,
       dots: false,
       prevArrow: '<button type="button" class="slick-prev"><i class="fa-solid fa-angle-left"></i></button>',
-      nextArrow: '<button type="button" class="slick-next"><i class="fa-solid fa-angle-right"></i></button>'
-
+      nextArrow: '<button type="button" class="slick-next"><i class="fa-solid fa-angle-right"></i></button>',
+      // Chame a função para adicionar o evento de clique aos cartões no carregamento inicial
+      init: function(event, slick) {
+        addClickEventToCards();
+      },
+      responsive: [
+        {
+          breakpoint: 780, // Para dispositivos móveis
+          settings: {
+            slidesToShow: 3 // Alterado para 3 para dispositivos móveis
+          }
+        }
+      ]
     });
-  });
-
+});
 
 // Get the modal
 var modal = document.getElementById("myModal");
 
 // Get the modal content element
 var modalContent = document.getElementById("modalImg");
-var modalContentUrl = document.getElementById("productUrl");
+// var modalContentUrl = document.getElementById("productUrl");
 
 // Get the close button
 var span = document.getElementsByClassName("close")[0];
@@ -279,7 +307,7 @@ cards.forEach(function(card) {
     var productUrl = this.getAttribute('data-modal-url');
 
 
-    modalContentUrl.href = productUrl;
+    // modalContentUrl.href = productUrl;
     modalContent.src = modalContentPath;
     modal.style.display = "block";
   });

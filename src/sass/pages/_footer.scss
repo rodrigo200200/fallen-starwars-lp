@@ -1,6 +1,7 @@
 footer {
     background: #000;
-    width: 100%;
+    width: 88%;
+    padding-left: 12vw;
     .logo {
         padding: 4.665799062988027vw 0 6.4986985944820406vw 0;
         width: 57.080167vw;
@@ -11,14 +12,10 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        svg:first-of-type {
-            width: 12.083333333333334vw;
-
+        margin-top: 6vw;
+        svg {
+            display: none
         }
-        svg:last-of-type {
-            width: 17.447916666666668vw;
-        }
-
     }
     .box-direitos {
         display: flex;
@@ -28,8 +25,8 @@ footer {
         padding-bottom: 4.4685059864653826vw;
         p, a {
             color: #807E7E;
-            font-size: 2.933333333333333vw;
-            line-height: 3.933333333333333vw;
+            font-size: 2.2222222222222223vw;
+            line-height: 3.5vw;
             text-align: center;
             font-weight: 500;
         }
@@ -51,14 +48,48 @@ footer {
         text-align: center;
         font-weight: 500;
         padding: 3.237012vw 0 3.041124414367517vw 0;
-        margin-left: -6vw;
+    }
+    .box-top-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        svg:first-of-type {
+            margin-top: 7vw;
+            width: 54.166666666666664vw;
+        }
+        svg:last-of-type {
+            width: 31.11111111111111vw;
+        }
     }
     @media screen and (min-width: 750px) {
+        width: 89%;
+        padding-left: 5.5vw;
+        .box-top-mobile {
+            display: none;  
+        }
         .logo {
             padding: 1.665799062988027vw 0 2.4986985944820406vw 0;
             width: 26.080166579906297vw;
             display: block;
             margin: 0 auto;
+        }
+        .box-top {
+            margin-top: 0;
+            justify-content: space-between;
+            svg {
+                display: block;
+            }
+            svg:first-of-type {
+                width: 12.083333333333334vw;
+                height: 1.9791666666666667vw;
+                margin-left: 2vw;
+            }
+            svg:last-of-type {
+                width: 17.447916666666668vw;
+                height: 4.114583333333333vw;
+                margin-right: 2vw;
+            }
         }
         .box-direitos {
             display: flex;
@@ -84,6 +115,7 @@ footer {
             text-align: center;
             font-weight: 500;
             padding: 0 0 0.7vw 0;
+            margin-left: -6vw;
         }
     }
   

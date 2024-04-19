@@ -16,6 +16,7 @@
         letter-spacing: 0.54vw;
         text-transform: uppercase;
         margin-left: -4px;
+        width: max-content;
     }
     .titulo3 {
         color: #FFFFFF;
@@ -24,6 +25,7 @@
         letter-spacing: 0.54vw;
         text-transform: uppercase;
         margin-left: -4px;
+        line-height: 2.4vw;
     }
     .subt1 {
         color: #FFFFFF;
@@ -46,7 +48,7 @@
         letter-spacing: 0.4vw;
         text-transform: uppercase;
         margin-top: 1.5vw;
-        line-height: 1.4vw;
+        line-height: 1.6vw;
     }
 }
 .box-texto {
@@ -84,46 +86,68 @@
         overflow: visible;
         width: 100%;
         .titulo1 {
-            font-size: 5.8vw;
+            font-size: 6.111111111111111vw;
             letter-spacing: 0.4vw;
-            margin-top: 2vw;
+            margin-top: 5vw;
+            overflow: visible;
+            letter-spacing: 1.7vw;
+            line-height: 7vw;
+            overflow: hidden;
+            br {
+                display: none;
+            }
         }
         .titulo2 {
-            font-size: 8.7vw;
-            letter-spacing: 0.8vw;
+            font-size: 6.666666666666667vw;
+            letter-spacing: 1.5vw;
+            margin-left: 0;
+            margin-top: 1vw;
+            overflow: hidden;
         }
         .titulo3 {
-            font-size: 2.2916666666666665vw;
-            letter-spacing: 0.54vw;
-            margin-left: -4px;
+            font-size: 5vw;
+            letter-spacing: 1.5vw;
+            margin-left: 0;
+            line-height: 5.6vw;
+            overflow: hidden;
         }
         .subt1 {
-            font-size: 4.5vw;
+            font-size: 4.444444444444445vw;
             letter-spacing: 0.9vw;
+            overflow: hidden;
         }
         .subt2 {
-            font-size: 3vw;
-            letter-spacing: 0.6vw;
+            font-size: 3.3333333333333335vw;
+            letter-spacing: 0.8vw;
+            overflow: hidden;
         }
         .subt3 {
-            font-size: 1.25vw;
+            font-size: 2.7777777777777777vw;
             letter-spacing: 0.4vw;
-            margin-top: 1.5vw;
-            line-height: 1.4vw;
+            margin-top: 4vw;
+            line-height: 3.7vw;
+            overflow: hidden;
+            width: 70%;
+            br {
+                display: none;
+            }
         }
     }
     .box-texto {
         .t1 {
-            margin-top: 5vw;
-            font-size:2.4vw;
-            letter-spacing: 0.2vw;
-            line-height: 3vw;
+            margin-top: 5.555555555555555vw;
+            font-size: 2.7777777777777777vw;
+            letter-spacing: 0.4vw;
+            line-height: 3.7vw;
+            br {
+                display: none;
+            }
         }
         .t2 {
             margin-top: 2vw;
-            font-size:2.4vw;
-            letter-spacing: 0.2vw;
-            line-height: 3vw;
+            font-size: 2.7777777777777777vw;
+            letter-spacing: 0.4vw;
+            line-height: 3.7vw;
         }
     }
   

@@ -11,9 +11,12 @@ section{
   opacity: 0;
   transition: all 0.5s ease;
   padding: 1vw;
-  svg {
+  position: relative;
+  overflow: visible;
+  .logo-gear {
       margin-top: 1vw;
       width: 12.864583333333334vw;
+      height: 1.71875vw;
   }
   .cta {
       width: 100%;
@@ -36,6 +39,10 @@ section{
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+  svg {
+    top: 1vw;
+    right: 45vw;
+  }
  }
 
 .sck2 {
@@ -145,6 +152,7 @@ section{
   background-image: url('../img/bg8.webp');
   display: flex;
   justify-content: center;
+  align-items: end;
   .box-sec {
       .cta{
           background: #FFDD00;
@@ -165,7 +173,7 @@ section{
   justify-content: flex-end;
   .box-sec {
       .cta{
-          margin-top: 1.5vw;
+          margin-top: 0.9vw;
           background: #FFDD00;
           border: 1px solid #FFDD00;
       }
@@ -179,15 +187,22 @@ section{
 .box-sec1 {
   margin-bottom: 3vw;
   margin-right: 7vw;
+  svg {
+    display: none;
+  }
 }
 
 .box-sec2 {
-  margin-bottom: 3vw;
-  margin-left: 11.5vw;
+  margin-bottom: 4%;
+  margin-left: 11%;
   width: 29.89vw;
   display: flex;
   flex-direction: column;
   align-items: end;
+  svg {
+    top: -4vw;
+    right: 1vw;
+  }
 }
 
 .box-sec3 {
@@ -197,6 +212,10 @@ section{
   display: flex;
   flex-direction: column;
   align-items: end;
+  svg {
+    top: -5vw;
+    right: 22.5vw;
+  }
 }
 
 .box-sec4 {
@@ -206,6 +225,10 @@ section{
   display: flex;
   flex-direction: column;
   align-items: end;
+  svg {
+    top: -5vw;
+    right: 16.5vw;
+  }
 }
 
 .box-sec5 {
@@ -215,6 +238,10 @@ section{
   display: flex;
   flex-direction: column;
   align-items: end;
+  svg {
+    top: -5vw;
+    right: 17.5vw
+  }
 }
 
 .box-sec6 {
@@ -224,6 +251,10 @@ section{
   display: flex;
   flex-direction: column;
   align-items: end;
+  svg {
+    top: -5vw;
+    right: 18.5vw;
+  }
 }
 
 .box-sec7 {
@@ -233,14 +264,23 @@ section{
   display: flex;
   flex-direction: column;
   align-items: end;
+  svg {
+    top: -5vw;
+    right: 21.5vw;
+  }
 }
 
 .box-sec8 {
-  margin-top: 6vw;
   width: 29.8vw;
   display: flex;
   flex-direction: column;
   align-items: start;
+  margin-bottom: 4vw;
+  margin-left: -12vw;
+  svg {
+    top: 1vw;
+    right: 0.5vw;
+  }
 }
 
 .box-sec9 {
@@ -251,39 +291,64 @@ section{
   flex-direction: column;
   align-items: start;
   overflow: visible;
+  svg {
+    top: -5vw;
+    right: 38.5vw;
+  }
 }
 
-
+.bg-mob {
+  display: none;
+}
   @media screen and (max-width: 750px) {
     section{
       background-position: center;
+      min-height: unset;
+      display: flex;
+      flex-direction: column;
     }
-
+    .bg-mob {
+      width: 100%;
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
     .box-sec {
-      padding: 1vw;
-      svg {
+      padding: 0 2vw 0 20.888889vw;
+      .logo-gear {
           margin-top: 2vw;
-          width: 33vw;
+          width: 27.77777777777778vw;
+          height: 3.75vw;
       }
       .cta {
-          font-size: 4vw;
+          font-size: 3.611111111111111vw;
           letter-spacing: 0.8vw;
-          padding: 2vw 0;
+          padding: 2.4vw 0;
           margin-top: 2vw;
       }
     
     }
 
     .sck1 {
-      background-image: url('../img/bg1-mob.webp');
-      align-items: center;
-      justify-content: center;
+      background-image: none;
+      align-items: baseline;
+      svg {
+        display: none;
+      }
+      .lucasfilm {
+        bottom: 54vw;
+        left: 93vw;
+    }
      }
     
     .sck2 {
-      background-image: url('../img/bg2-mob.webp');
-      align-items: center;
-      justify-content: center;
+      background-image: none;
+      align-items: baseline;
+      .lucasfilm {
+        bottom: 93vw;
+        left: 20vw;
+    }
       .box-sec {
           .cta{
               letter-spacing: 0.5vw;
@@ -298,9 +363,12 @@ section{
      }
     
     .sck3 {
-      background-image: url('../img/bg3-mob.webp');
-      align-items: center;
-      justify-content: center;
+      background-image: none;
+      align-items: baseline;
+      .lucasfilm {
+        bottom: 54vw;
+        left: 93vw;
+    }
       .box-sec {
           a{
               background: #F72F2F;
@@ -314,9 +382,12 @@ section{
      }
     
     .sck4 {
-      background-image: url('../img/bg4-mob.webp');
-      align-items: center;
-      justify-content: center;
+      background-image: none;
+      align-items: baseline;
+      .lucasfilm {
+        bottom: 92vw;
+        left: 93vw;
+    }
       .box-sec {
           .cta{
               background: #27CD00;
@@ -330,9 +401,12 @@ section{
      }
     
     .sck5 {
-      background-image: url('../img/bg5-mob.webp');
-      align-items: center;
-      justify-content: center;
+      background-image: none;
+      align-items: baseline;
+      .lucasfilm {
+        bottom: 78vw;
+        left: 19vw;
+    }
       .box-sec {
           .cta{
               background: #FFF;
@@ -346,9 +420,12 @@ section{
      }
     
     .sck6 {
-      background-image: url('../img/bg6-mob.webp');
-      align-items: center;
-      justify-content: center;
+      background-image: none;
+      align-items: baseline;
+      .lucasfilm {
+        bottom: 102vw;
+        left: 19vw;
+    }
       .box-sec {
           .cta{
               background: #FFF;
@@ -362,9 +439,12 @@ section{
      }
     
     .sck7 {
-      background-image: url('../img/bg7-mob.webp');
-      align-items: center;
-      justify-content: center;
+      background-image: none;
+      align-items: baseline;
+      .lucasfilm {
+        bottom: 88vw;
+        left: 19vw;
+    }
       .box-sec {
           .cta{
               background: #FFDD00;
@@ -378,9 +458,12 @@ section{
      }
     
     .sck8 {
-      background-image: url('../img/bg8-mob.webp');
-      align-items: center;
-      justify-content: center;
+      background-image: none;
+      align-items: baseline;
+      .lucasfilm {
+        bottom: 65vw;
+        left: 92vw;
+    }
       .box-sec {
           .cta{
               background: #FFDD00;
@@ -394,12 +477,12 @@ section{
      }
     
     .sck9 {
-      background-image: url('../img/bg9-mob.webp');
-      align-items: center;
-      justify-content: center;
+      background-image: none;
+      align-items: baseline;
       .box-sec {
           .cta{
-              margin-top: 1.5vw;
+              margin-top: 4vw;
+              margin-bottom: 4vw;
               background: #FFDD00;
               border: 1px solid #FFDD00;
           }
@@ -415,47 +498,91 @@ section{
 
     .box-sec1 {
       margin: 0;
-      width: 75vw;
+      width: unset;
+      svg {
+        display: block;
+        top: -15vw;
+        right: 56vw;
+      }
     }
     
     .box-sec2 {
       margin: 0;
       width: 75vw;
+      align-items: baseline;
+      svg {
+        top: -15vw;
+        right: 55vw;
+      }
     }
     
     .box-sec3 {
       margin: 0;
       width: 75vw;
+      align-items: baseline;
+      svg {
+        top: -15vw;
+        right: 55vw;
+      }
     }
     
     .box-sec4 {
       margin: 0;
       width: 75vw;
+      align-items: baseline;
+      svg {
+        top: -15vw;
+        right: 55vw;
+      }
     }
     
     .box-sec5 {
       margin: 0;
       width: 75vw;
+      align-items: baseline;
+      svg {
+        top: -15vw;
+        right: 55vw;
+      }
     }
     
     .box-sec6 {
       margin: 0;
       width: 75vw;
+      align-items: baseline;
+      svg {
+        top: -15vw;
+        right: 55vw;
+      }
     }
     
     .box-sec7 {
       margin: 0;
       width: 75vw;
+      align-items: baseline;
+      svg {
+        top: 0vw;
+        right: 3vw;
+      }
     }
     
     .box-sec8 {
       margin: 0;
       width: 75vw;
+      align-items: baseline;
+      svg {
+        top: -15vw;
+        right: 55vw;
+      }
     }
     
     .box-sec9 {
       margin: 0;
+      margin-top: -28vw;
       width: 75vw;
+      svg {
+        display: none;
+      }
     }
 
 
